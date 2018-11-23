@@ -1,4 +1,3 @@
-//
 //  ViewController.swift
 //  Map RPG Game
 //

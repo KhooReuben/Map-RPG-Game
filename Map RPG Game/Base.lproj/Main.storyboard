@@ -39,5 +39,20 @@
             </objects>
             <point key="canvasLocation" x="828" y="133"/>
         </scene>
+        <!--Game View Controller-->
+        <scene sceneID="qWS-Fw-uWH">
+            <objects>
+                <viewController id="B62-wO-05M" customClass="GameViewController" customModule="Map_RPG_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GPH-BY-Fyr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8UH-hu-XE3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EJX-DU-0Ts" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1567" y="133"/>
+        </scene>
     </scenes>
 </document>
