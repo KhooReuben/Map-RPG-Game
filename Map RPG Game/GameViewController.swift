@@ -20,12 +20,15 @@ class GameViewController: UIViewController {
     
     func generateRandomNumber() {
         target = Float.random(in: 0...100).rounded()
-        targetLabel.text = "\(target)"
+        targetLabel.text = "Target = "+"\(target)"
     }
     
     @IBAction func claimButton(_ sender: Any) {
         let score = slider.value.rounded() - target
         resultLabel.text = "\(score)"
+    
+        if score > 5 {generateRandomNumber()}
+        else if score < -5 {generateRandomNumber()}
     }
     
 }
