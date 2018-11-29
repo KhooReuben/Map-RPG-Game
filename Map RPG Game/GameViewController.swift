@@ -45,6 +45,9 @@ class GameViewController: UIViewController {
             attemptsLabel.text = "\(attempts)" + " attempts left"
             
         }
+        else {
+            attemptsLabel.text = "Congratulations!"
+        }
+        //dismiss the slide if they fail 3 times + unable to try again until xyz amount of time passes.
     }
-    
 }
