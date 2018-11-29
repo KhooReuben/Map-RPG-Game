@@ -62,6 +62,9 @@
                                 <rect key="frame" x="182" y="543" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="claimButton:" destination="B62-wO-05M" eventType="touchUpInside" id="pYQ-hv-4GL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNU-DE-PXU">
                                 <rect key="frame" x="186" y="414" width="42" height="21"/>
@@ -74,6 +77,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8UH-hu-XE3"/>
                     </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="lNU-DE-PXU" id="dhg-3Q-8oE"/>
+                        <outlet property="slider" destination="HrO-jo-aAj" id="vHe-gW-BqX"/>
+                        <outlet property="targetLabel" destination="HC1-ZG-dac" id="AOg-AT-guv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJX-DU-0Ts" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
