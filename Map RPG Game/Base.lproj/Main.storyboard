@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="84" y="133"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="hzs-7k-yMJ">
             <objects>
-                <viewController id="JJx-YC-tQT" customClass="ViewController" customModule="Map_RPG_Game" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JJx-YC-tQT" customClass="MapViewController" customModule="Map_RPG_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2AV-rw-sPH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
