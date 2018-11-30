@@ -17,7 +17,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         generateRandomNumber()
-        territoryLabel.text = "Bournemouth Uni"
+        territoryLabel.text = "Location: Bournemouth Uni"
         attemptsLabel.text = "\(attempts)" + " attempts left"
         factionLabel.text = "Team Instinct Territory"
         //change colour of background
@@ -47,7 +47,7 @@ class GameViewController: UIViewController {
             
         }
         else {
-            attemptsLabel.text = "Congratulations!"
+            attemptsLabel.text = "Congratulations! Territory Claimed!"
             // Store values of user's faction + update the values of the location and dismiss the slide back to the MapView. That way the mapView can look at the information in the database for the mapView annotations instead of having to pass information between two VC's
             //save value of
         }
