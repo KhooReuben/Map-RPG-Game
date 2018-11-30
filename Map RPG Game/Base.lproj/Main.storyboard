@@ -102,9 +102,8 @@
                                     <action selector="claimButton:" destination="B62-wO-05M" eventType="touchUpInside" id="pYQ-hv-4GL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Territory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPD-Ed-hcE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Territory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPD-Ed-hcE">
                                 <rect key="frame" x="20" y="107" width="380" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -122,9 +121,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="attempts left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOP-Sy-LBL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="attempts left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOP-Sy-LBL">
                                 <rect key="frame" x="50" y="500" width="314" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2KI-J2-JCq">
+                                <rect key="frame" x="35" y="382" width="10.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Fd-5t-fCb">
+                                <rect key="frame" x="359" y="382" width="28.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -132,8 +142,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="tOP-Sy-LBL" firstAttribute="top" secondItem="1Fd-5t-fCb" secondAttribute="bottom" constant="96" id="1ma-5y-mJf"/>
                             <constraint firstItem="lNU-DE-PXU" firstAttribute="centerX" secondItem="GPH-BY-Fyr" secondAttribute="centerX" id="Bv4-Zw-aD2"/>
+                            <constraint firstItem="1Fd-5t-fCb" firstAttribute="top" secondItem="GPH-BY-Fyr" secondAttribute="top" constant="383" id="Gu1-DL-oyb"/>
+                            <constraint firstItem="1Fd-5t-fCb" firstAttribute="baseline" secondItem="2KI-J2-JCq" secondAttribute="baseline" id="Rm3-lh-AD9"/>
+                            <constraint firstItem="2KI-J2-JCq" firstAttribute="leading" secondItem="GPH-BY-Fyr" secondAttribute="leadingMargin" id="W0y-NZ-Qir"/>
+                            <constraint firstItem="1Fd-5t-fCb" firstAttribute="trailing" secondItem="GPH-BY-Fyr" secondAttribute="trailingMargin" id="nw1-IA-AkN"/>
                             <constraint firstItem="lNU-DE-PXU" firstAttribute="top" secondItem="GPH-BY-Fyr" secondAttribute="top" constant="414" id="wM3-um-yE9"/>
+                            <constraint firstItem="2KI-J2-JCq" firstAttribute="leading" secondItem="DPD-Ed-hcE" secondAttribute="leading" id="xzS-E5-eam"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8UH-hu-XE3"/>
                     </view>
