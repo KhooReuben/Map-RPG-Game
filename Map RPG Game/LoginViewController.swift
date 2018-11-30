@@ -19,6 +19,14 @@ class LoginViewController: UIViewController {
     
     @IBAction func login(_ sender: UIButton) {
    
+        guard let email = emailTextField.text, let password = passwordTextField.text else { return }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { user, error in
+            
+            if let _ = user {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     
     }
     
