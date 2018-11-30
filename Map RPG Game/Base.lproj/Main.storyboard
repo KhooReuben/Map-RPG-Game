@@ -50,11 +50,18 @@
                                 <rect key="frame" x="163" y="295" width="88" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="login:" destination="wQm-Tq-OHq" eventType="touchUpInside" id="L75-8H-WM7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="G11-iy-mzj"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="ka9-iX-2lp" id="sDU-Sr-ECU"/>
+                        <outlet property="passwordTextField" destination="3CU-Oe-CZY" id="Qaa-DH-RLd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNp-QN-OvA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
