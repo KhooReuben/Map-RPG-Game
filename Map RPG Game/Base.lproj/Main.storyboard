@@ -22,12 +22,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828" y="791"/>
+            <point key="canvasLocation" x="-614" y="133"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tqB-w1-F4W">
             <objects>
-                <viewController id="wQm-Tq-OHq" customClass="LoginViewController" customModule="Map_RPG_Game" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="wQm-Tq-OHq" customClass="LoginViewController" customModule="Map_RPG_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ix2-5G-Kav">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
