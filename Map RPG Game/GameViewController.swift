@@ -12,7 +12,7 @@ class GameViewController: UIViewController {
     var target: Float = 0
     var territory: String = ""
     var attempts: Int = 3
-    // gather information from cocopods about who currently owns the territory
+    // gather information from cocopods about who currently owns the territory - faction
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +49,12 @@ class GameViewController: UIViewController {
         else {
             attemptsLabel.text = "Congratulations!"
             // Store values of user's faction + update the values of the location and dismiss the slide back to the MapView. That way the mapView can look at the information in the database for the mapView annotations instead of having to pass information between two VC's
+            //save value of
         }
-        //dismiss the slide if they fail 3 times + unable to try again until xyz amount of time passes.
+        if attempts == 0 {
+            dismiss(animated: true, completion: nil)
+            //(save value of 'fail' to database - prevent user from accessing same location until XYZ time passes.)
+        }
+        //dismiss the slide if they fail 3 times (+ unable to try again until xyz amount of time passes.)
     }
 }
