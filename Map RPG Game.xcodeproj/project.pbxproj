@@ -34,7 +34,6 @@
 		4335AF4821B1822900F77490 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4335AF4A21B1855700F77490 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		437373D421B010090019F010 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
-		438C59B621B9483700A63A7A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "/Users/s5065758/Documents/GitHub/Map-RPG-Game/Map RPG Game/Main.storyboard"; sourceTree = "<absolute>"; };
 		5A56C0BE21A854900000D885 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		5A66DC5521B93D2E00F83015 /* Territory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Territory.swift; sourceTree = "<group>"; };
 		5A66DC5721B93FBC00F83015 /* TerritoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerritoryManager.swift; sourceTree = "<group>"; };
@@ -84,7 +83,6 @@
 				5A66DC5721B93FBC00F83015 /* TerritoryManager.swift */,
 				431E1F9321A84A1F0042999C /* MapViewController.swift */,
 				5A56C0BE21A854900000D885 /* GameViewController.swift */,
-				438C59B621B9483700A63A7A /* Main.storyboard */,
 				5A66DC5921B9453D00F83015 /* UserProfileViewController.swift */,
 				4335AF4A21B1855700F77490 /* GoogleService-Info.plist */,
 				431E1F8821A840FC0042999C /* Assets.xcassets */,

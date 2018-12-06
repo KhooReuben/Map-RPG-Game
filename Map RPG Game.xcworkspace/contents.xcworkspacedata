@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/s5065758/Documents/GitHub/Map-RPG-Game/Map RPG Game/Main.storyboard">
-   </FileRef>
-   <FileRef
       location = "group:Map RPG Game.xcodeproj">
    </FileRef>
    <FileRef
