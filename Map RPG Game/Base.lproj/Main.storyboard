@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JJx-YC-tQT">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+>>>>>>> parent of e3bb77f... Merge branch 'Dev' of https://github.com/KhooReuben/Map-RPG-Game into Dev
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,7 +26,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="-1422" y="133"/>
+=======
+            <point key="canvasLocation" x="-635" y="133"/>
+>>>>>>> parent of e3bb77f... Merge branch 'Dev' of https://github.com/KhooReuben/Map-RPG-Game into Dev
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tqB-w1-F4W">
@@ -32,6 +40,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+<<<<<<< HEAD
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ka9-iX-2lp">
                                 <rect key="frame" x="81" y="155" width="251" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -48,12 +57,40 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sp8-2s-Bw2">
                                 <rect key="frame" x="163" y="295" width="88" height="40"/>
+=======
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3CU-Oe-CZY">
+                                <rect key="frame" x="111" y="226" width="192" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="password">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="cellTitle"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sp8-2s-Bw2">
+                                <rect key="frame" x="141" y="295" width="132" height="40"/>
+>>>>>>> parent of e3bb77f... Merge branch 'Dev' of https://github.com/KhooReuben/Map-RPG-Game into Dev
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="login:" destination="wQm-Tq-OHq" eventType="touchUpInside" id="L75-8H-WM7"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
+=======
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test@test.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ka9-iX-2lp">
+                                <rect key="frame" x="111" y="146" width="192" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+>>>>>>> parent of e3bb77f... Merge branch 'Dev' of https://github.com/KhooReuben/Map-RPG-Game into Dev
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="G11-iy-mzj"/>
@@ -65,7 +102,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNp-QN-OvA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="-735" y="133"/>
+=======
+            <point key="canvasLocation" x="105.79710144927537" y="132.58928571428572"/>
+>>>>>>> parent of e3bb77f... Merge branch 'Dev' of https://github.com/KhooReuben/Map-RPG-Game into Dev
         </scene>
         <!--Map View Controller-->
         <scene sceneID="hzs-7k-yMJ">
@@ -80,12 +121,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cek-zt-gZw">
+<<<<<<< HEAD
                                 <rect key="frame" x="173" y="832" width="69" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="My Profile"/>
                                 <connections>
                                     <segue destination="74O-n7-4e4" kind="show" id="S9s-qc-3VM"/>
                                 </connections>
+=======
+                                <rect key="frame" x="184" y="832" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+>>>>>>> parent of e3bb77f... Merge branch 'Dev' of https://github.com/KhooReuben/Map-RPG-Game into Dev
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -97,7 +144,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ha3-fS-K47" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="38" y="133"/>
+=======
+            <point key="canvasLocation" x="880" y="133"/>
+>>>>>>> parent of e3bb77f... Merge branch 'Dev' of https://github.com/KhooReuben/Map-RPG-Game into Dev
         </scene>
         <!--Game View Controller-->
         <scene sceneID="qWS-Fw-uWH">
@@ -212,6 +263,7 @@
             </objects>
             <point key="canvasLocation" x="1566.6666666666667" y="132.58928571428572"/>
         </scene>
+<<<<<<< HEAD
         <!--User Profile View Controller-->
         <scene sceneID="D3n-QQ-erN">
             <objects>
@@ -262,5 +314,7 @@
             </objects>
             <point key="canvasLocation" x="833" y="133"/>
         </scene>
+=======
+>>>>>>> parent of e3bb77f... Merge branch 'Dev' of https://github.com/KhooReuben/Map-RPG-Game into Dev
     </scenes>
 </document>
