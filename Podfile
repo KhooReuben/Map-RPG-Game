@@ -1,6 +1,8 @@
 
 platform :ios, '9.0'
 
+inhibit_all_warnings!
+
 target 'Map RPG Game' do
 
   use_frameworks!
