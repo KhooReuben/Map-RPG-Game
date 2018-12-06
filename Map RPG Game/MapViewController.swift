@@ -1,11 +1,13 @@
 import MapKit
 import Foundation
+import CoreLocation
 import Firebase
 
 class MapViewController : UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     
+    let territoryManager = TerritoryManager()
     let locationManager = CLLocationManager()
 //    let targetLocationManager = TargetLocationManager()
     var endCoordinate = CLLocation()
@@ -18,10 +20,9 @@ class MapViewController : UIViewController {
 //        locationManager.delegate = self
         locationManager.startUpdatingLocation()
         
-//        for location in targetLocationManager.locations {
-//            locationManager.startMonitoring(for: location.region)
-//            mapView.addAnnotation(location)
-//        }
+        for location in territoryManager.locations {
+            locationManager.startMonitoring(for: location.region)
+            mapView.addAnnotation(location)
+        }
     }
 }
-
