@@ -26,3 +26,9 @@ class MapViewController : UIViewController {
         }
     }
 }
+
+extension MapViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        //opens up territory for capture
+    }
+}
