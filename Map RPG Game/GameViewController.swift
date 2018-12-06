@@ -17,9 +17,9 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         generateRandomNumber()
-        territoryLabel.text = "Location: Bournemouth Uni"
+        territoryLabel.text = "Location:" + "\(nameOfLocation)"
         attemptsLabel.text = "\(attempts)" + " attempts left"
-        factionLabel.text = "Team Instinct Territory"
+        factionLabel.text = "\(UserTerritory)" + " Territory"
         //change colour of background
     }
 
