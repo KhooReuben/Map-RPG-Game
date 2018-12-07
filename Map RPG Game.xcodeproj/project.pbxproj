@@ -21,7 +21,6 @@
 		5A56C0BF21A854900000D885 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A56C0BE21A854900000D885 /* GameViewController.swift */; };
 		5A66DC5621B93D2E00F83015 /* Territory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A66DC5521B93D2E00F83015 /* Territory.swift */; };
 		5A66DC5821B93FBC00F83015 /* TerritoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A66DC5721B93FBC00F83015 /* TerritoryManager.swift */; };
-		5A66DC5A21B9453D00F83015 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A66DC5921B9453D00F83015 /* UserProfileViewController.swift */; };
 		8304B21F35751603EC953763 /* Pods_Map_RPG_Game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC647156EC14B7EB53F834F7 /* Pods_Map_RPG_Game.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +42,6 @@
 		5A56C0BE21A854900000D885 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		5A66DC5521B93D2E00F83015 /* Territory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Territory.swift; sourceTree = "<group>"; };
 		5A66DC5721B93FBC00F83015 /* TerritoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerritoryManager.swift; sourceTree = "<group>"; };
-		5A66DC5921B9453D00F83015 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		5AB7089721BABDC500C53DD9 /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		996E16C1BAFCDCBD1F2AA85A /* Pods-Map RPG Game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Map RPG Game.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Map RPG Game/Pods-Map RPG Game.debug.xcconfig"; sourceTree = "<group>"; };
 		EC647156EC14B7EB53F834F7 /* Pods_Map_RPG_Game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Map_RPG_Game.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +91,6 @@
 				431E1F9321A84A1F0042999C /* MapViewController.swift */,
 				5AB7089721BABDC500C53DD9 /* Location.gpx */,
 				5A56C0BE21A854900000D885 /* GameViewController.swift */,
-				5A66DC5921B9453D00F83015 /* UserProfileViewController.swift */,
 				4335AF4A21B1855700F77490 /* GoogleService-Info.plist */,
 				431E1F8821A840FC0042999C /* Assets.xcassets */,
 				5A163CD021B94AD4009F98BB /* Main.storyboard */,
@@ -287,7 +284,6 @@
 				437373D521B010090019F010 /* AppManager.swift in Sources */,
 				431E1F8421A840FB0042999C /* AppContainerViewController.swift in Sources */,
 				431E1F9421A84A1F0042999C /* MapViewController.swift in Sources */,
-				5A66DC5A21B9453D00F83015 /* UserProfileViewController.swift in Sources */,
 				431E1F8221A840FB0042999C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
