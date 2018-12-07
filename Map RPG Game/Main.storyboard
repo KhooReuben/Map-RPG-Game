@@ -113,6 +113,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="y4M-B3-iGS"/>
                     </view>
+                    <connections>
+                        <outlet property="blueButton" destination="EkY-KF-9UE" id="MV5-Fq-hh9"/>
+                        <outlet property="blueImageView" destination="FS7-zu-eh3" id="2PV-N7-u7h"/>
+                        <outlet property="emailSignInTextField" destination="uCA-mP-FlG" id="haL-X1-y1k"/>
+                        <outlet property="greenButton" destination="1nc-7H-Sqv" id="52w-NO-sgl"/>
+                        <outlet property="greenImageView" destination="8tn-fU-40T" id="gAa-6I-d04"/>
+                        <outlet property="passwordSignInTextField" destination="qcN-pp-ug6" id="pTd-E1-cmZ"/>
+                        <outlet property="redButton" destination="CSi-44-UNf" id="jK7-DB-KHY"/>
+                        <outlet property="redImageView" destination="IaL-Sw-RZ6" id="qVI-PS-4Yn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qZN-Q3-NQB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,9 +213,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nK9-l5-TDC">
-                                <rect key="frame" x="87" y="140" width="240" height="137"/>
+                                <rect key="frame" x="77" y="135" width="260" height="282"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdT-pd-odU">
+                                <rect key="frame" x="77" y="461" width="260" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uia-Sj-TPY">
+                                <rect key="frame" x="77" y="530" width="260" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="rOn-Xi-W4S"/>
@@ -317,7 +341,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVt-9l-JuV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1686.9565217391305" y="160.71428571428569"/>
+            <point key="canvasLocation" x="2168" y="-492"/>
         </scene>
     </scenes>
 </document>
