@@ -32,7 +32,10 @@ class SignInViewController: UIViewController {
     
         guard let email = emailSignInTextField.text, let password = passwordSignInTextField.text else { return }
         
-        Auth.auth().createUser(withEmail: email, password: password, completion: {(user, error) in
+        Auth.auth().createUser(withEmail: email, password: password, completion: {(authResult, error) in
+            
+            guard let user = authResult?.user else { return }
+            
             if error == nil {
                 ref.child("users").child((user?.uid)!).setValue(email, withCompletion: (user, error) in
                     if let _ = user {
