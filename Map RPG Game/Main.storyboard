@@ -117,9 +117,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3r-Os-A6N">
-                                <rect key="frame" x="180" y="569" width="46" height="30"/>
+                                <rect key="frame" x="65" y="569" width="283" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Claim Terriotry"/>
+                                <connections>
+                                    <action selector="claimButton:" destination="nqt-LK-HZ4" eventType="touchUpInside" id="iNS-hM-hlg"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Rn9-QG-wJL">
                                 <rect key="frame" x="40" y="361" width="337" height="30"/>

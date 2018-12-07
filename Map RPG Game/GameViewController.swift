@@ -22,11 +22,6 @@ class GameViewController: UIViewController {
         factionLabel.text = "Broben Territory"
         //change colour of background
     }
-
-    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        generateRandomNumber()
-        slider.value = slider.minimumValue
-    }
     
     func generateRandomNumber() {
         target = Float.random(in: 0...100).rounded()
