@@ -39,7 +39,6 @@ class GameViewController: UIViewController {
         else if score < -5 {generateRandomNumber()
             attempts = attempts - 1
             attemptsLabel.text = "\(attempts)" + " attempts left"
-            
         }
         else {
             attemptsLabel.text = "Congratulations! Territory Claimed!"
