@@ -6,10 +6,10 @@ import Firebase
 class MapViewController : UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var TerritoryIdentifier: UILabel!
     
     let territoryManager = TerritoryManager()
     let locationManager = CLLocationManager()
-//    let targetLocationManager = TargetLocationManager()
     var endCoordinate = CLLocation()
     
     override func viewDidLoad() {
@@ -17,15 +17,26 @@ class MapViewController : UIViewController {
         
         mapView.userTrackingMode = .follow
         locationManager.requestAlwaysAuthorization()
-//        locationManager.delegate = self
+        locationManager.delegate = self
         locationManager.startUpdatingLocation()
         
         for location in territoryManager.locations {
             locationManager.startMonitoring(for: location.region)
             mapView.addAnnotation(location)
+            TerritoryIdentifier.text = "\(location.title)"
         }
     }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {     //when the segue happens
+//        if segue.identifier == "Show" {
+//            let destination = segue.destination as! MapViewController    //recieves the information from the delegate
+//            destination.delegate = self
+//        }
+//    }
 }
+
+//protocol SendDelegate {
+//    func userSelectsLocation (data: GameViewController)     // sets the data sent accross to the delegate as a 'TargetLocation' group
+//}
 
 extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
