@@ -10,8 +10,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var attemptsLabel: UILabel!
     var target: Float = 0
-    var territory: String = ""
-    var faction: String = ""
+    var territory: String = ""      //recieved from MapVC
+    var faction: String = ""        //recieved from UserProfile
     var attempts: Int = 3
     // gather information from cocopods about who currently owns the territory - faction
     

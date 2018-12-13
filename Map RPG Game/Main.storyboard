@@ -290,7 +290,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3r-Os-A6N">
                                 <rect key="frame" x="65" y="569" width="283" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Claim Terriotry"/>
+                                <state key="normal" title="Conquer"/>
                                 <connections>
                                     <action selector="claimButton:" destination="nqt-LK-HZ4" eventType="touchUpInside" id="iNS-hM-hlg"/>
                                 </connections>

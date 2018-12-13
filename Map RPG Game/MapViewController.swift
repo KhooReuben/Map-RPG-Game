@@ -28,7 +28,7 @@ class MapViewController : UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {     //when the segue happens
         if segue.identifier == "Claim Territory" {
-            let destination = segue.destination as! GameViewController    //recieves the information from the delegate
+            let destination = segue.destination as! GameViewController    //sends the information from the delegate
             destination.delegate = self
         }
     }
