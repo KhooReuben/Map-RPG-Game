@@ -11,7 +11,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var attemptsLabel: UILabel!
     var target: Float = 0
     var territory: String = ""      //recieved from MapVC
-    var faction: String = ""     //recieved from UserProfile
+    var faction: String = ""     //recieved from UserProfile/Firebase
     var attempts: Int = 3
     // gather information from cocopods about who currently owns the territory - faction
     
@@ -46,11 +46,9 @@ class GameViewController: UIViewController {
             // Store values of user's faction + update the values of the location and dismiss the slide back to the MapView. That way the mapView can look at the information in the database for the mapView annotations instead of having to pass information between two VC's
             //save value of
         }
-        func failAttemptToClaim() {
-            if attempts == 0 {
-                dismiss(animated: true, completion: nil)
+        if attempts == 0 {
+            dismiss(animated: true, completion: nil)
                 //(save value of 'fail' to database - prevent user from accessing same location until XYZ time passes.)
-            }
         }
         //dismiss the slide if they fail 3 times (+ unable to try again until xyz amount of time passes.)
     }
