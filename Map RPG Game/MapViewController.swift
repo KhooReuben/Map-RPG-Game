@@ -26,12 +26,12 @@ class MapViewController : UIViewController {
             TerritoryIdentifier.text = "\(location.title)"
         }
     }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {     //when the segue happens
-//        if segue.identifier == "Show" {
-//            let destination = segue.destination as! MapViewController    //recieves the information from the delegate
-//            destination.delegate = self
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {     //when the segue happens
+        if segue.identifier == "Show" {
+            let destination = segue.destination as! GameViewController    //recieves the information from the delegate
+            destination.delegate = self
+        }
+    }
 }
 
 //protocol SendDelegate {

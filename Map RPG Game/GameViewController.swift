@@ -52,3 +52,7 @@ class GameViewController: UIViewController {
         //dismiss the slide if they fail 3 times (+ unable to try again until xyz amount of time passes.)
     }
 }
+
+extension GameViewController: SendDelegate {
+    
+}
