@@ -23,7 +23,7 @@ class MapViewController : UIViewController {
         for location in territoryManager.locations {
             locationManager.startMonitoring(for: location.region)
             mapView.addAnnotation(location)
-            TerritoryIdentifier.text = "\(location.title)"
+            TerritoryIdentifier.text = "\(location.title ?? "--")" //default value = "--"
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {     //when the segue happens
