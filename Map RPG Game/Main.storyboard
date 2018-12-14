@@ -54,9 +54,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qcN-pp-ug6">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qcN-pp-ug6">
                                 <rect key="frame" x="102" y="408" width="211" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -75,40 +74,59 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSi-44-UNf">
-                                <rect key="frame" x="54" y="492" width="71" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.058155415096606489" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <connections>
-                                    <action selector="selectTeam:" destination="Fo4-1D-nmb" eventType="touchUpInside" id="49c-yJ-RhL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkY-KF-9UE">
-                                <rect key="frame" x="171" y="492" width="71" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkY-KF-9UE">
+                                <rect key="frame" x="143" y="496" width="133" height="201"/>
                                 <color key="backgroundColor" red="0.17070445074053864" green="0.41609585762392265" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="pP6-TZ-4M0"/>
+                                </constraints>
+                                <state key="normal" image="blueGraphic copy"/>
                                 <connections>
                                     <action selector="selectTeam:" destination="Fo4-1D-nmb" eventType="touchUpInside" id="FrR-Cg-FtY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nc-7H-Sqv">
-                                <rect key="frame" x="288" y="492" width="71" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nc-7H-Sqv">
+                                <rect key="frame" x="278" y="492" width="136" height="205"/>
                                 <color key="backgroundColor" red="0.15520650217303755" green="1" blue="0.10047477482956824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="greenGraphic copy"/>
                                 <connections>
                                     <action selector="selectTeam:" destination="Fo4-1D-nmb" eventType="touchUpInside" id="RcD-KT-Nk8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxX-7X-xwm">
-                                <rect key="frame" x="184" y="585" width="47" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxX-7X-xwm">
+                                <rect key="frame" x="184" y="737" width="47" height="30"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="signUpButton:" destination="Fo4-1D-nmb" eventType="touchUpInside" id="GZw-I7-fX4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSi-44-UNf">
+                                <rect key="frame" x="20" y="489" width="128" height="201"/>
+                                <color key="backgroundColor" red="1" green="0.058155415096606489" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="amy-K4-op7"/>
+                                    <constraint firstAttribute="height" constant="196" id="gz8-gM-9Fo"/>
+                                </constraints>
+                                <state key="normal" image="redGraphic copy"/>
+                                <connections>
+                                    <action selector="selectTeam:" destination="Fo4-1D-nmb" eventType="touchUpInside" id="49c-yJ-RhL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CSi-44-UNf" firstAttribute="top" secondItem="1nc-7H-Sqv" secondAttribute="top" id="1KD-u1-VRj"/>
+                            <constraint firstItem="1nc-7H-Sqv" firstAttribute="leading" secondItem="EkY-KF-9UE" secondAttribute="trailing" constant="1" id="4CW-D4-l7N"/>
+                            <constraint firstItem="EkY-KF-9UE" firstAttribute="leading" secondItem="y4M-B3-iGS" secondAttribute="leading" constant="143" id="J4d-FO-NC3"/>
+                            <constraint firstItem="EkY-KF-9UE" firstAttribute="top" secondItem="qcN-pp-ug6" secondAttribute="bottom" constant="58" id="L71-fN-tyK"/>
+                            <constraint firstItem="EkY-KF-9UE" firstAttribute="bottom" secondItem="1nc-7H-Sqv" secondAttribute="bottom" id="LsP-v8-pia"/>
+                            <constraint firstItem="y4M-B3-iGS" firstAttribute="bottom" secondItem="CSi-44-UNf" secondAttribute="bottom" constant="174" id="T3Y-11-tmo"/>
+                            <constraint firstItem="CSi-44-UNf" firstAttribute="top" secondItem="qcN-pp-ug6" secondAttribute="bottom" constant="54" id="Tu0-Zz-CmK"/>
+                            <constraint firstItem="y4M-B3-iGS" firstAttribute="bottom" secondItem="1nc-7H-Sqv" secondAttribute="bottom" constant="165" id="Z9s-05-qAb"/>
+                            <constraint firstItem="xxX-7X-xwm" firstAttribute="top" secondItem="EkY-KF-9UE" secondAttribute="bottom" constant="40" id="glo-ZH-oYk"/>
+                            <constraint firstAttribute="trailing" secondItem="1nc-7H-Sqv" secondAttribute="trailing" id="js2-9b-Qn1"/>
+                            <constraint firstItem="CSi-44-UNf" firstAttribute="leading" secondItem="bYe-hi-jdS" secondAttribute="leadingMargin" id="oU1-fb-DZg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="y4M-B3-iGS"/>
                     </view>
                     <connections>
@@ -358,4 +376,9 @@
             <point key="canvasLocation" x="2168" y="-492"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="blueGraphic copy" width="600" height="900"/>
+        <image name="greenGraphic copy" width="600" height="900"/>
+        <image name="redGraphic copy" width="600" height="900"/>
+    </resources>
 </document>
