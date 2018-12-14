@@ -17,6 +17,8 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //mapView.setCenter(CLLocationCoordinate2DMake(...), animated: true)
+        
         mapView.userTrackingMode = .follow
   //     locationManager.delegate = self
         locationManager.startUpdatingLocation()
@@ -53,8 +55,6 @@ class MapViewController: UIViewController {
                 view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
                 view.image = UIImage(named: "redGraphic")
             }
-            
-            view.markerTintColor = .purple
             
             return view
         }
