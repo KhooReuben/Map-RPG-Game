@@ -24,47 +24,45 @@ class MapViewController : UIViewController {
         
         for location in territoryManager.locations {
             locationManager.startMonitoring(for: location.region)
-           // mapView.addAnnotation(location)
+            mapView.addAnnotation(location)
             TerritoryIdentifier.text = "\(location.title ?? "--")" //default value = "--"
             
-            
-            
-            func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-                guard let quote = view.annotation as? Territory else {return}
-                print(quote.title)
-                performSegue(withIdentifier: "Claim Territory", sender: quote)
-                //activates segue with the identifier from the current view controller's storyboard file - in this case the "info" button on the map view
+        }
+        }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        guard let quote = view.annotation as? Territory else {return}
+        print(quote.title)
+        performSegue(withIdentifier: "Claim Territory", sender: quote)
+        //activates segue with the identifier from the current view controller's storyboard file - in this case the "info" button on the map view
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Claim Territory" {
+            do { let destination = segue.destination as! MapViewController
+                destination.attackTerritory = (sender as! Territory)
+                //this tells the segue to go to the second view controller
             }
-            
-            func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                if segue.identifier == "Claim Territory" {
-                    do { let destination = segue.destination as! MapViewController
-                        destination.attackTerritory = (sender as! Territory)
-                        //this tells the segue to go to the second view controller
-                    }
-                }
-            
-            
-            
-            
         }
     }
+    
+
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {     //when the segue happens
-//        if segue.identifier == "Claim Territory" {
-//            let destination = segue.destination as! GameViewController    //sends the information from the delegate
-//            destination.delegate = self
-//        }
-//    }
+//     if segue.identifier == "Claim Territory" {
+//         let destination = segue.destination as! GameViewController    //sends the information from the delegate
+//     //     destination.delegate = self
+//      }
+//   }
 }
 
 //protocol SendDelegate {
-//    func userSelectsLocation (data: GameViewController)     // sets the data sent accross to the delegate as a 'TargetLocation' group
+//  func userSelectsLocation (data: GameViewController)     // sets the data sent accross to the delegate as a 'TargetLocation' group
 //}
-
-
+//
+//
 //extension MapViewController: CLLocationManagerDelegate {
 //    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        //opens up territory for capture
-    }
- // }
-//}
+//        //opens up territory for capture
+//    }
+//  }
+
