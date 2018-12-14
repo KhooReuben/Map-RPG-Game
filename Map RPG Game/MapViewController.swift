@@ -42,19 +42,9 @@ class MapViewController : UIViewController {
                         destination.attackTerritory = (sender as! Territory)
                         //this tells the segue to go to the second view controller
                     }
-                }
-            
-            
-            
-            
+                }          
         }
     }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {     //when the segue happens
-//        if segue.identifier == "Claim Territory" {
-//            let destination = segue.destination as! GameViewController    //sends the information from the delegate
-//            destination.delegate = self
-//        }
-//    }
 }
 
 //protocol SendDelegate {
