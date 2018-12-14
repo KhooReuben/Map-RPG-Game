@@ -28,7 +28,7 @@ class MapViewController : UIViewController {
             TerritoryIdentifier.text = "\(location.title ?? "--")" //default value = "--"
             
         }
-        }
+    }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         guard let quote = view.annotation as? Territory else {return}
@@ -45,7 +45,6 @@ class MapViewController : UIViewController {
             }
         }
     }
-    
 
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {     //when the segue happens
 //     if segue.identifier == "Claim Territory" {
@@ -60,9 +59,9 @@ class MapViewController : UIViewController {
 //}
 //
 //
-//extension MapViewController: CLLocationManagerDelegate {
-//    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-//        //opens up territory for capture
-//    }
-//  }
+extension MapViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        TerritoryIdentifier.text = "\(attackTerritory.title ?? "--")"
+    }
+  }
 
