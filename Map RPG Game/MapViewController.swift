@@ -39,9 +39,9 @@ class MapViewController : UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Claim Territory" {
-            do { let destination = segue.destination as! MapViewController
+            do { let destination = segue.destination as! GameViewController
                 destination.attackTerritory = (sender as! Territory)
-                //this tells the segue to go to the second view controller
+                //this tells the segue to go to the game view controller
             }
         }
     }
