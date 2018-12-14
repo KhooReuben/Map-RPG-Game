@@ -45,14 +45,6 @@ class MapViewController : UIViewController {
             }
         }
     }
-    
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {     //when the segue happens
-//     if segue.identifier == "Claim Territory" {
-//         let destination = segue.destination as! GameViewController    //sends the information from the delegate
-//     //     destination.delegate = self
-//      }
-//   }
 }
 
 //protocol SendDelegate {
@@ -64,5 +56,5 @@ extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         TerritoryIdentifier.text = "\(attackTerritory.title ?? "--")"
     }
-  }
+}
 
