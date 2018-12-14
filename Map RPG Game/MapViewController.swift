@@ -24,7 +24,7 @@ class MapViewController : UIViewController {
         
         locationManager.requestAlwaysAuthorization()
         //makes it so the app gives a requestto use the user's location before using it directly
-        locationManager.delegate = self as! CLLocationManagerDelegate
+        locationManager.delegate = self as? CLLocationManagerDelegate
         locationManager.startUpdatingLocation()
         // gives updates on the user's location
         
@@ -37,6 +37,10 @@ class MapViewController : UIViewController {
     }
     
     
+    func mapview(_ mapView: MKMapView,annotationView view: MKAnnotationView, calloutAccesoryControlTapped control: UIControl) {
+        performSegue(withIdentifier: "segue", sender: territoryManager)
+        
+    }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
