@@ -28,7 +28,7 @@ class MapViewController : UIViewController {
             TerritoryIdentifier.text = "\(location.title ?? "--")" //default value = "--"
             
         }
-        }
+    }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         guard let quote = view.annotation as? Territory else {return}
@@ -47,11 +47,6 @@ class MapViewController : UIViewController {
     }
 }
 
-//protocol SendDelegate {
-//  func userSelectsLocation (data: GameViewController)     // sets the data sent accross to the delegate as a 'TargetLocation' group
-//}
-//
-//
 extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         TerritoryIdentifier.text = "\(attackTerritory.title ?? "--")"
