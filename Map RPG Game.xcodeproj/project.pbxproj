@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430D835721C9244B00DE597B /* MapFix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430D835621C9244B00DE597B /* MapFix.swift */; };
 		431E1F8221A840FB0042999C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E1F8121A840FB0042999C /* AppDelegate.swift */; };
 		431E1F8421A840FB0042999C /* AppContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E1F8321A840FB0042999C /* AppContainerViewController.swift */; };
 		431E1F8921A840FC0042999C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431E1F8821A840FC0042999C /* Assets.xcassets */; };
 		431E1F8C21A840FC0042999C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431E1F8A21A840FC0042999C /* LaunchScreen.storyboard */; };
-		431E1F9421A84A1F0042999C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E1F9321A84A1F0042999C /* MapViewController.swift */; };
 		4335AF4921B1822900F77490 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4335AF4821B1822900F77490 /* LoginViewController.swift */; };
 		437373D521B010090019F010 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437373D421B010090019F010 /* AppManager.swift */; };
 		43ABB91821BABAF800FAD28D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ABB91721BABAF800FAD28D /* ProfileViewController.swift */; };
@@ -26,13 +26,13 @@
 
 /* Begin PBXFileReference section */
 		08F85ECD24E93346B96EB0FE /* Pods-Map RPG Game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Map RPG Game.release.xcconfig"; path = "Pods/Target Support Files/Pods-Map RPG Game/Pods-Map RPG Game.release.xcconfig"; sourceTree = "<group>"; };
+		430D835621C9244B00DE597B /* MapFix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFix.swift; sourceTree = "<group>"; };
 		431E1F7E21A840FB0042999C /* Map RPG Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Map RPG Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		431E1F8121A840FB0042999C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		431E1F8321A840FB0042999C /* AppContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainerViewController.swift; sourceTree = "<group>"; };
 		431E1F8821A840FC0042999C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		431E1F8B21A840FC0042999C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		431E1F8D21A840FC0042999C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		431E1F9321A84A1F0042999C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4335AF4821B1822900F77490 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		437373D421B010090019F010 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		43ABB91721BABAF800FAD28D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 				437373D421B010090019F010 /* AppManager.swift */,
 				5A66DC5521B93D2E00F83015 /* Territory.swift */,
 				5A66DC5721B93FBC00F83015 /* TerritoryManager.swift */,
-				431E1F9321A84A1F0042999C /* MapViewController.swift */,
+				430D835621C9244B00DE597B /* MapFix.swift */,
 				43ABB91721BABAF800FAD28D /* ProfileViewController.swift */,
 				5AB7089721BABDC500C53DD9 /* Location.gpx */,
 				5A56C0BE21A854900000D885 /* GameViewController.swift */,
@@ -279,11 +279,11 @@
 				5A66DC5821B93FBC00F83015 /* TerritoryManager.swift in Sources */,
 				4335AF4921B1822900F77490 /* LoginViewController.swift in Sources */,
 				43ABB91821BABAF800FAD28D /* ProfileViewController.swift in Sources */,
+				430D835721C9244B00DE597B /* MapFix.swift in Sources */,
 				5A56C0BF21A854900000D885 /* GameViewController.swift in Sources */,
 				5A66DC5621B93D2E00F83015 /* Territory.swift in Sources */,
 				437373D521B010090019F010 /* AppManager.swift in Sources */,
 				431E1F8421A840FB0042999C /* AppContainerViewController.swift in Sources */,
-				431E1F9421A84A1F0042999C /* MapViewController.swift in Sources */,
 				431E1F8221A840FB0042999C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

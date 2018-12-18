@@ -1,11 +1,18 @@
-import MapKit
+//
+//  MapFix.swift
+//  Map RPG Game
+//
+//  Created by Reuben Khoo (s5065758) on 18/12/2018.
+//  Copyright © 2018 Reuben Khoo (s5065758). All rights reserved.
+//
+
 import Foundation
+import MapKit
 import CoreLocation
-import Firebase
 
-class MapViewController: UIViewController {
-
-     var attackTerritory: Territory!
+class MapFix: UIViewController {
+    
+    var attackTerritory: Territory!
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var TerritoryIdentifier: UILabel!
@@ -20,7 +27,7 @@ class MapViewController: UIViewController {
         //mapView.setCenter(CLLocationCoordinate2DMake(...), animated: true)
         
         mapView.userTrackingMode = .follow
-  //     locationManager.delegate = self
+        //     locationManager.delegate = self
         locationManager.startUpdatingLocation()
         locationManager.requestAlwaysAuthorization()
         //makes it so the app gives a requestto use the user's location before using it directly
@@ -31,35 +38,45 @@ class MapViewController: UIViewController {
             mapView.addAnnotation(location)
             TerritoryIdentifier.text = "\(location.title ?? "--")" //default value = "--"
             
+            
         }
     }
+    
+    
 }
-  
-    extension MapViewController: MKMapViewDelegate {
+
+extension MapFix: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
-        func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-            
-            //guard let annotation = annotation as? Territory else { return nil }
-            
-            let identifier = "marker"
-            var view: MKMarkerAnnotationView
-            
-            if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-                as? MKMarkerAnnotationView {
-                dequeuedView.annotation = annotation
-                view = dequeuedView
-            } else {
-                view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-                view.canShowCallout = true
-                view.calloutOffset = CGPoint(x: -5, y: 5)
-                view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-                view.image = UIImage(named: "redGraphic")
-            }
-            
-            return view
+        //guard let annotation = annotation as? Territory else { return nil }
+        
+        let identifier = "marker"
+        var view: MKMarkerAnnotationView
+        
+        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+            as? MKMarkerAnnotationView {
+            dequeuedView.annotation = annotation
+            view = dequeuedView
+        } else {
+            view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            view.canShowCallout = true
+            view.calloutOffset = CGPoint(x: -5, y: 5)
+            view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            view.image = UIImage(named: "redGraphic")
         }
         
+        return view
     }
+    
+}
+
+var teamGraphic: [UIImage] = [
+    UIImage(named: "redGraphic")!,
+    UIImage(named: "blueGraphic")!,
+    UIImage(named: "greenGraphic")!
+]
+
 
 //
 //    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
@@ -78,7 +95,7 @@ class MapViewController: UIViewController {
 //        }
 //    }
 //
-    
+
 
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {     //when the segue happens
 //     if segue.identifier == "Claim Territory" {

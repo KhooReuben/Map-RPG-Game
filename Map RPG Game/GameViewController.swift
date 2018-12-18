@@ -44,6 +44,7 @@ class GameViewController: UIViewController {
         else {
             attemptsLabel.text = "Congratulations! Territory Claimed!"
             // Store values of user's faction + update the values of the location and dismiss the slide back to the MapView. That way the mapView can look at the information in the database for the mapView annotations instead of having to pass information between two VC's
+            
         }
         if attempts == 0 {
             dismiss(animated: true, completion: nil)//dismiss the slide if they fail 3 times (+ unable to try again until xyz amount of time passes.)
