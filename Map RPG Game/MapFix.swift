@@ -9,9 +9,12 @@
 import Foundation
 import MapKit
 import CoreLocation
+import Firebase
 
-class MapFix: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+
+class MapFix: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate   {
     
+    var ref: DatabaseReference!
     var attackTerritory: Territory!
     
     @IBOutlet weak var mapView: MKMapView!
@@ -41,6 +44,48 @@ class MapFix: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
             
         }
     }
+   
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView?
+    {
+        if !(annotation is MKPointAnnotation) {
+            return nil
+        }
+        
+        let annotationIdentifier = "AnnotationIdentifier"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier)
+        
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
+            annotationView!.canShowCallout = true
+        }
+        else {
+            annotationView!.annotation = annotation
+        }
+        
+        let pinImage = UIImage(named: "redGraphic")
+        annotationView!.image = pinImage
+        
+        return annotationView
+    }
+   
+    
+    // this code should have something to do with reading data from the Firebase Database:
+   
+    
+    ref = Database.database().reference()
+    
+    let userID = Auth.auth().currentUser?.uid
+    ref.child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+    // Get user value
+    let value = snapshot.value as? NSDictionary
+    let username = value?["username"] as? String ?? ""
+    let user = User(username: username)
+    
+    // ...
+    }) { (error) in
+    print(error.localizedDescription)
+    }
+
     
     
 }
@@ -78,28 +123,7 @@ var teamGraphic: [UIImage] = [
 ]
 
 
-func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView?
-{
-    if !(annotation is MKPointAnnotation) {
-        return nil
-    }
-    
-    let annotationIdentifier = "AnnotationIdentifier"
-    var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier)
-    
-    if annotationView == nil {
-        annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
-        annotationView!.canShowCallout = true
-    }
-    else {
-        annotationView!.annotation = annotation
-    }
-    
-    let pinImage = UIImage(named: "redGraphic")
-    annotationView!.image = pinImage
-    
-    return annotationView
-}
+
 
 //
 //    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
