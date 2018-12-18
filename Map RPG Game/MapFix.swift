@@ -10,7 +10,7 @@ import Foundation
 import MapKit
 import CoreLocation
 
-class MapFix: UIViewController {
+class MapFix: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     var attackTerritory: Territory!
     
@@ -45,7 +45,7 @@ class MapFix: UIViewController {
     
 }
 
-extension MapFix: MKMapViewDelegate {
+extension MapFix {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
@@ -77,6 +77,29 @@ var teamGraphic: [UIImage] = [
     UIImage(named: "greenGraphic")!
 ]
 
+
+func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView?
+{
+    if !(annotation is MKPointAnnotation) {
+        return nil
+    }
+    
+    let annotationIdentifier = "AnnotationIdentifier"
+    var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier)
+    
+    if annotationView == nil {
+        annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
+        annotationView!.canShowCallout = true
+    }
+    else {
+        annotationView!.annotation = annotation
+    }
+    
+    let pinImage = UIImage(named: "redGraphic")
+    annotationView!.image = pinImage
+    
+    return annotationView
+}
 
 //
 //    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
