@@ -38,11 +38,6 @@ class GameViewController: UIViewController {
     
     @IBAction func claimButton(_ sender: Any) {
         
-//        territory.color = .purple
-//        delegate?.didFinishGame(success: true, territory: territory)
-//        dismiss(animated: true, completion: nil)
-        
-        
         let score = slider.value.rounded() - target
         resultLabel.text = "\(score)"
     
@@ -66,9 +61,3 @@ class GameViewController: UIViewController {
         }
     }
 }
-
-//extension GameViewController: SendDelegate {
-//    func userSelectTerritory(data: Territory) {
-//
-//    }
-//}
