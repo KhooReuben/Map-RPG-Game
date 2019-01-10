@@ -12,7 +12,13 @@ import CoreLocation
 import Firebase
 
 
-class MapFix: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate   {
+class MapFix: UIViewController, CLLocationManagerDelegate   {
+    
+//    var teamGraphic: [UIImage] = [
+//        UIImage(named: "redGraphic")!,
+//        UIImage(named: "blueGraphic")!,
+//        UIImage(named: "greenGraphic")!
+//    ]
     
     var ref: DatabaseReference!
     var attackTerritory: Territory!
@@ -30,7 +36,8 @@ class MapFix: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate   {
         //mapView.setCenter(CLLocationCoordinate2DMake(...), animated: true)
         
         mapView.userTrackingMode = .follow
-        //     locationManager.delegate = self
+        mapView.delegate = self
+        locationManager.delegate = self
         locationManager.startUpdatingLocation()
         locationManager.requestAlwaysAuthorization()
         //makes it so the app gives a requestto use the user's location before using it directly
@@ -40,65 +47,42 @@ class MapFix: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate   {
             locationManager.startMonitoring(for: location.region)
             mapView.addAnnotation(location)
             TerritoryIdentifier.text = "\(location.title ?? "--")" //default value = "--"
-            
-            
         }
     }
    
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView?
-    {
-        if !(annotation is MKPointAnnotation) {
-            return nil
-        }
-        
-        let annotationIdentifier = "AnnotationIdentifier"
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier)
-        
-        if annotationView == nil {
-            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
-            annotationView!.canShowCallout = true
-        }
-        else {
-            annotationView!.annotation = annotation
-        }
-        
-        let pinImage = UIImage(named: "redGraphic")
-        annotationView!.image = pinImage
-        
-        return annotationView
-    }
    
     
     // this code should have something to do with reading data from the Firebase Database:
    
     
-    ref = Database.database().reference()
+   // ref = Database.database().reference()
     
-    let userID = Auth.auth().currentUser?.uid
-    ref.child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
-    // Get user value
-    let value = snapshot.value as? NSDictionary
-    let username = value?["username"] as? String ?? ""
-    let user = User(username: username)
-    
-    // ...
-    }) { (error) in
-    print(error.localizedDescription)
-    }
+//    let userID = Auth.auth().currentUser?.uid
+// //   ref.child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+//    // Get user value
+////    let value = snapshot.value as? NSDictionary
+//    let username = value?["username"] as? String ?? ""
+//    let user = User(username: username)
+//
+//    // ...
+//    }) { (error) in
+//    print(error.localizedDescription)
+//    }
 
     
     
 }
 
-extension MapFix {
+extension MapFix: MKMapViewDelegate {
     
+   
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
-        //guard let annotation = annotation as? Territory else { return nil }
-        
+ 
+        guard let annotation = annotation as? Territory else { return nil }
+    
         let identifier = "marker"
         var view: MKMarkerAnnotationView
-        
+     
         if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
             as? MKMarkerAnnotationView {
             dequeuedView.annotation = annotation
@@ -106,21 +90,38 @@ extension MapFix {
         } else {
             view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             view.canShowCallout = true
-            view.calloutOffset = CGPoint(x: -5, y: 5)
             view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-            view.image = UIImage(named: "redGraphic")
+            
         }
-        
+        view.markerTintColor = annotation.color
         return view
     }
     
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let gameViewController = storyboard.instantiateViewController(withIdentifier: "Game") as! GameViewController
+        gameViewController.delegate = self
+        gameViewController.territory = view.annotation as! Territory
+        present(gameViewController, animated: true, completion: nil)
+    }
+    
+    
+    
 }
 
-var teamGraphic: [UIImage] = [
-    UIImage(named: "redGraphic")!,
-    UIImage(named: "blueGraphic")!,
-    UIImage(named: "greenGraphic")!
-]
+extension MapFix: GameViewControllerDelegate {
+    
+    func didFinishGame(success: Bool, territory: Territory) {
+        mapView.removeAnnotation(territory)
+        mapView.addAnnotation(territory)
+        print("did claim \(territory.title!)")
+    
+    }
+
+}
+
+
 
 
 

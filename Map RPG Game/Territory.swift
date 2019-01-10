@@ -8,7 +8,7 @@ class Territory: NSObject, MKAnnotation {
     var center: CLLocation!
     var radius: Int?
     var region: CLCircularRegion
-    
+    var color = UIColor.green
     init(coordinate:CLLocationCoordinate2D, title: String, center: CLLocation){
         self.coordinate = coordinate
         self.title = title

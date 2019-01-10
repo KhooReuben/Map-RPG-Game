@@ -201,14 +201,6 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="757"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7k9-eL-bZG">
-                                <rect key="frame" x="23" y="825" width="101" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Claim Territory"/>
-                                <connections>
-                                    <segue destination="nqt-LK-HZ4" kind="show" identifier="Claim Territory" id="sVx-vn-We9"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sU4-5X-fgb">
                                 <rect key="frame" x="56" y="841" width="303" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -292,7 +284,7 @@
         <!--Game View Controller-->
         <scene sceneID="R8w-XL-IbN">
             <objects>
-                <viewController id="nqt-LK-HZ4" customClass="GameViewController" customModule="Map_RPG_Game" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Game" id="nqt-LK-HZ4" customClass="GameViewController" customModule="Map_RPG_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vAh-c1-gJT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -373,7 +365,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVt-9l-JuV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2168" y="-492"/>
+            <point key="canvasLocation" x="2301" y="-539"/>
         </scene>
     </scenes>
     <resources>
