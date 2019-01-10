@@ -14,8 +14,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var attemptsLabel: UILabel!
-    var target: Float = 0
-    var faction: String = ""     //recieved from UserProfile/Firebase
+    var target: Float = 0    //recieved from UserProfile/Firebase
     var attempts: Int = 3
     var delegate: GameViewControllerDelegate?
     var territory: Territory!
@@ -25,9 +24,10 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         generateRandomNumber()
-        territoryLabel.text = "Location: " + "\(territory)"
+        territoryLabel.text = "Location: " + "\(territory.title!)"
         attemptsLabel.text = "\(attempts)" + " attempts left"
-        factionLabel.text = "\(faction)" + " Territory"
+        factionLabel.text = "Current Colour"
+        factionLabel.textColor = territory.color
         //change colour of background
     }
     
