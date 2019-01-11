@@ -123,9 +123,6 @@ extension MapFix: GameViewControllerDelegate {
 
 
 
-
-
-
 //
 //    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
 //        guard let quote = view.annotation as? Territory else {return}
@@ -157,9 +154,9 @@ extension MapFix: GameViewControllerDelegate {
 //}
 //
 //
-//extension MapViewController: CLLocationManagerDelegate {
-//    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-//        //opens up territory for capture
-//    }
-//  }
+extension MapFix {
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        TerritoryIdentifier.text = "\(region.identifier)" + " is available for capture"
+    }
+  }
 
