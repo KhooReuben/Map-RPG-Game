@@ -14,11 +14,7 @@ import Firebase
 
 class MapFix: UIViewController, CLLocationManagerDelegate   {
     
-//    var teamGraphic: [UIImage] = [
-//        UIImage(named: "redGraphic")!,
-//        UIImage(named: "blueGraphic")!,
-//        UIImage(named: "greenGraphic")!
-//    ]
+
     
     var ref: DatabaseReference!
     var attackTerritory: Territory!
@@ -49,27 +45,6 @@ class MapFix: UIViewController, CLLocationManagerDelegate   {
             TerritoryIdentifier.text = "\(location.title ?? "--")" //default value = "--"
         }
     }
-   
-   
-    
-    // this code should have something to do with reading data from the Firebase Database:
-   
-    
-   // ref = Database.database().reference()
-    
-//    let userID = Auth.auth().currentUser?.uid
-// //   ref.child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
-//    // Get user value
-////    let value = snapshot.value as? NSDictionary
-//    let username = value?["username"] as? String ?? ""
-//    let user = User(username: username)
-//
-//    // ...
-//    }) { (error) in
-//    print(error.localizedDescription)
-//    }
-
-    
     
 }
 
@@ -149,11 +124,7 @@ extension MapFix: GameViewControllerDelegate {
 //      }
 //   }
 
-//protocol SendDelegate {
-//  func userSelectsLocation (data: GameViewController)     // sets the data sent accross to the delegate as a 'TargetLocation' group
-//}
-//
-//
+
 extension MapFix {
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         TerritoryIdentifier.text = "\(region.identifier)" + " is available for capture"
